@@ -1,22 +1,15 @@
-# Zùsto Café by Eric — Premium prototype
+# Zùsto Café — premium prototype (fixed)
 
-Prototipo editorial/premium para Zùsto Café by Eric, Puerto Banús.
+Static website: no framework, no build step and no dependencies.
 
-## Desarrollo
-
-```bash
-npm install
-npm run dev
-```
-
-## Build
+## Local preview
+Open `index.html` directly, or run any static server:
 
 ```bash
-npm run build
+python3 -m http.server 8080
 ```
 
-Compatible con Vercel. Framework preset: Vite.
+Then open `http://localhost:8080`.
 
-## Nota sobre imágenes
-
-Las imágenes del prototipo se cargan desde fuentes públicas que muestran el negocio real. Para producción conviene sustituirlas por archivos originales/licenciados facilitados por Zùsto Café y guardarlos en `/public/images`.
+## Vercel
+Import this folder/repository as an **Other / Static** project. No Build Command is required.

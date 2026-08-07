@@ -6,12 +6,86 @@ const menuData={
 es:{pastry:[['01','Croissant signature','Hojaldre, mantequilla y acabado artesanal.'],['02','Tartaletas de fruta','Fruta fresca, crema y texturas de temporada.'],['03','Chocolate selection','Bombonería y piezas de chocolate con receta Zùsto.'],['04','Piezas individuales','Una vitrina cambiante de alta pastelería.'],['05','Tartas para compartir','Formatos pensados para mesa y celebración.'],['06','Viennoiserie','Bollería de inspiración belga, recién hecha.']],breakfast:[['01','Breakfast pastry','Bollería, café y una mañana sin prisa.'],['02','Yogurt & fruit','Combinaciones frescas para empezar ligero.'],['03','Toast selection','Opciones saladas para equilibrar la mañana.'],['04','Fresh juices','Zumos y bebidas frías.'],['05','Sweet breakfast','El lado más indulgente del desayuno.'],['06','Brunch moments','Una selección para compartir.']],gelato:[['01','Vanilla','Cremoso y limpio.'],['02','Chocolate','Intenso, redondo, clásico.'],['03','Pistachio','Fruto seco y textura sedosa.'],['04','Seasonal fruit','Sabores que cambian con la temporada.'],['05','Affogato','Gelato y espresso.'],['06','To take away','Tu Zùsto para seguir paseando por Banús.']],coffee:[['01','Espresso','Corto, preciso y aromático.'],['02','Cappuccino','Espresso y leche texturizada.'],['03','Flat white','Más café, textura cremosa.'],['04','Iced coffee','Café frío para Marbella.'],['05','Matcha & alternatives','Más allá del espresso.'],['06','Coffee & pastry','El dúo esencial de Zùsto.']]},
 en:{pastry:[['01','Signature croissant','Layered pastry, butter and artisan finish.'],['02','Fruit tarts','Fresh fruit, cream and seasonal textures.'],['03','Chocolate selection','Chocolate pieces made with the Zùsto recipe.'],['04','Individual pastries','An ever-changing fine pastry counter.'],['05','Cakes to share','Made for the table and for celebrations.'],['06','Viennoiserie','Belgian-inspired pastry, freshly made.']],breakfast:[['01','Breakfast pastry','Pastry, coffee and an unhurried morning.'],['02','Yogurt & fruit','Fresh combinations for a lighter start.'],['03','Toast selection','Savoury options to balance the morning.'],['04','Fresh juices','Juices and cold drinks.'],['05','Sweet breakfast','The indulgent side of breakfast.'],['06','Brunch moments','A selection made for sharing.']],gelato:[['01','Vanilla','Creamy and clean.'],['02','Chocolate','Deep, rounded, classic.'],['03','Pistachio','Nutty with a silky texture.'],['04','Seasonal fruit','Flavours changing with the season.'],['05','Affogato','Gelato meets espresso.'],['06','To take away','Take Zùsto on your walk through Banús.']],coffee:[['01','Espresso','Short, precise and aromatic.'],['02','Cappuccino','Espresso with textured milk.'],['03','Flat white','More coffee, creamy texture.'],['04','Iced coffee','Cold coffee for Marbella.'],['05','Matcha & alternatives','Beyond espresso.'],['06','Coffee & pastry','The essential Zùsto pairing.']]}};
 let lang='es',category='pastry';
-function renderMenu(){const grid=document.querySelector('#menuGrid');grid.innerHTML=menuData[lang][category].map(([n,t,d])=>`<article class="menu-card"><span class="num">${n}</span><div><h3>${t}</h3><p>${d}</p></div><span class="price">Zùsto Café · Puerto Banús</span></article>`).join('')}
-function applyLang(){document.documentElement.lang=lang;document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.dataset.i18n;if(translations[lang][key])el.innerHTML=translations[lang][key]});document.querySelectorAll('.lang-toggle span').forEach(s=>s.classList.toggle('active',s.textContent===lang.toUpperCase()));renderMenu()}
-document.querySelector('.lang-toggle').addEventListener('click',()=>{lang=lang==='es'?'en':'es';applyLang()});
-document.querySelectorAll('.menu-tab').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.menu-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');category=btn.dataset.category;renderMenu()}));
-const header=document.querySelector('.site-header');window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>40),{passive:true});
-const menuBtn=document.querySelector('.menu-toggle'),mobileMenu=document.querySelector('.mobile-menu');menuBtn.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');mobileMenu.setAttribute('aria-hidden',!open);menuBtn.classList.toggle('active',open)});mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobileMenu.classList.remove('open');mobileMenu.setAttribute('aria-hidden','true')}));
-const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal,.reveal-img').forEach(el=>io.observe(el));
-const glow=document.querySelector('.cursor-glow');window.addEventListener('mousemove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px';glow.style.opacity='1'});window.addEventListener('mouseleave',()=>glow.style.opacity='0');
-applyLang();
+
+function qs(selector, scope=document){return scope.querySelector(selector)}
+function qsa(selector, scope=document){return [...scope.querySelectorAll(selector)]}
+
+function renderMenu(){
+  const grid=qs('#menuGrid');
+  if(!grid || !menuData[lang] || !menuData[lang][category]) return;
+  grid.innerHTML=menuData[lang][category].map(([n,t,d])=>`<article class="menu-card"><span class="num">${n}</span><div><h3>${t}</h3><p>${d}</p></div><span class="price">Zùsto Café · Puerto Banús</span></article>`).join('');
+}
+
+function applyLang(){
+  document.documentElement.lang=lang;
+  qsa('[data-i18n]').forEach(el=>{
+    const key=el.dataset.i18n;
+    if(translations[lang] && translations[lang][key]) el.innerHTML=translations[lang][key];
+  });
+  qsa('.lang-toggle span').forEach(el=>el.classList.toggle('active',el.textContent.trim()===lang.toUpperCase()));
+  renderMenu();
+}
+
+function setupInteractions(){
+  const langToggle=qs('.lang-toggle');
+  if(langToggle) langToggle.addEventListener('click',()=>{lang=lang==='es'?'en':'es';applyLang()});
+
+  qsa('.menu-tab').forEach(btn=>btn.addEventListener('click',()=>{
+    qsa('.menu-tab').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    category=btn.dataset.category || 'pastry';
+    renderMenu();
+  }));
+
+  const header=qs('.site-header');
+  if(header) window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+
+  const menuBtn=qs('.menu-toggle');
+  const mobileMenu=qs('.mobile-menu');
+  if(menuBtn && mobileMenu){
+    menuBtn.addEventListener('click',()=>{
+      const open=mobileMenu.classList.toggle('open');
+      mobileMenu.setAttribute('aria-hidden',String(!open));
+      menuBtn.classList.toggle('active',open);
+    });
+    qsa('a',mobileMenu).forEach(a=>a.addEventListener('click',()=>{
+      mobileMenu.classList.remove('open');
+      mobileMenu.setAttribute('aria-hidden','true');
+      menuBtn.classList.remove('active');
+    }));
+  }
+
+  // Progressive enhancement: the page is visible even if this observer is unavailable.
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(entries=>entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('animate-in');
+        io.unobserve(entry.target);
+      }
+    }),{threshold:.08,rootMargin:'0px 0px -5% 0px'});
+    qsa('.reveal,.reveal-img').forEach(el=>io.observe(el));
+  }
+
+  const glow=qs('.cursor-glow');
+  if(glow && matchMedia('(pointer:fine)').matches){
+    window.addEventListener('mousemove',e=>{
+      glow.style.left=e.clientX+'px';
+      glow.style.top=e.clientY+'px';
+      glow.style.opacity='1';
+    },{passive:true});
+    window.addEventListener('mouseleave',()=>glow.style.opacity='0');
+  }
+
+  qsa('img').forEach(img=>img.addEventListener('error',()=>{
+    img.classList.add('image-failed');
+    img.removeAttribute('src');
+  },{once:true}));
+}
+
+function init(){
+  applyLang();
+  setupInteractions();
+}
+
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init,{once:true});
+else init();
