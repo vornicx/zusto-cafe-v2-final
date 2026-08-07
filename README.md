@@ -1,5 +1,22 @@
-# Zùsto Café by Eric — prototipo Archic
+# Zùsto Café by Eric — Premium prototype
 
-Web estática responsive. Abre `index.html` o despliega la carpeta en Vercel.
+Prototipo editorial/premium para Zùsto Café by Eric, Puerto Banús.
 
-Las fotografías son recursos reales publicados del establecimiento y se usan solo como material provisional del prototipo. Para publicación comercial deben sustituirse por originales autorizados por el negocio.
+## Desarrollo
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+Compatible con Vercel. Framework preset: Vite.
+
+## Nota sobre imágenes
+
+Las imágenes del prototipo se cargan desde fuentes públicas que muestran el negocio real. Para producción conviene sustituirlas por archivos originales/licenciados facilitados por Zùsto Café y guardarlos en `/public/images`.
