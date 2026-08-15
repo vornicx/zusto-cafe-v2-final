@@ -25,7 +25,7 @@ const translations = {
     ericP: 'Eric aporta el oficio pastelero; Zùsto, una nueva manera de entender lo dulce. El resultado es una propuesta que busca que lo saludable no tenga aspecto de compromiso.',
     quote: 'Mismos sabores, mismas emociones. Una experiencia más consciente.', igTitle: 'De Puerto Banús<br><em>al feed.</em>',
     visitEyebrow: 'VEN A PROBARLO · PUERTO BANÚS', visitTitle: 'Tu pausa dulce,<br><em>junto al puerto.</em>', hours: 'Horario',
-    hoursValue: 'Lun — Vie · 08:00 — 20:00<br>Sáb — Dom · 08:00 — 22:00', location: 'Ubicación', maps: 'Abrir en Maps', backTop: 'Volver arriba ↑'
+    hoursValue: 'Lunes — Domingo<br>08:00 — 22:00', location: 'Ubicación', maps: 'Abrir en Maps', backTop: 'Volver arriba ↑'
   },
   en: {
     navConcept: 'Concept', navExperience: 'Experience', navSelection: 'Selection', navVisit: 'Visit', visitCta: 'Get directions',
@@ -53,13 +53,21 @@ const translations = {
     ericP: 'Eric brings pastry craft; Zùsto brings a new way of thinking about sweetness. The result aims to make conscious choices feel like an upgrade, not a compromise.',
     quote: 'Same flavours, same emotions. A more conscious experience.', igTitle: 'From Puerto Banús<br><em>to the feed.</em>',
     visitEyebrow: 'COME TASTE IT · PUERTO BANÚS', visitTitle: 'Your sweet pause,<br><em>by the marina.</em>', hours: 'Opening hours',
-    hoursValue: 'Mon — Fri · 08:00 — 20:00<br>Sat — Sun · 08:00 — 22:00', location: 'Location', maps: 'Open in Maps', backTop: 'Back to top ↑'
+    hoursValue: 'Monday — Sunday<br>08:00 — 22:00', location: 'Location', maps: 'Open in Maps', backTop: 'Back to top ↑'
   }
 };
 
 let lang = 'es';
 const qs = (selector, scope = document) => scope.querySelector(selector);
 const qsa = (selector, scope = document) => [...scope.querySelectorAll(selector)];
+
+function ensureCanonical() {
+  if (qs('link[rel="canonical"]')) return;
+  const canonical = document.createElement('link');
+  canonical.rel = 'canonical';
+  canonical.href = 'https://zustocafe.vercel.app/';
+  document.head.appendChild(canonical);
+}
 
 function applyLang() {
   document.documentElement.lang = lang;
@@ -129,6 +137,7 @@ function setupInteractions() {
 }
 
 function init() {
+  ensureCanonical();
   applyLang();
   setupInteractions();
 }
