@@ -4,150 +4,192 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#f4f1ea" />
-  <meta name="description" content="Zùsto Café by Eric — alta pastelería, café y gelato sin azúcar añadido en Puerto Banús, Marbella." />
-  <title>Zùsto Café by Eric — No Sugar. Same Taste.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <meta name="color-scheme" content="light" />
+  <meta name="description" content="Zùsto Café by Eric en Puerto Banús, Marbella. Pastelería artesanal, café y una nueva forma de disfrutar lo dulce con la innovación de Zùsto." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:title" content="Zùsto Café by Eric — Puerto Banús" />
+  <meta property="og:description" content="Pastelería artesanal, innovación y placer consciente en Puerto Banús." />
+  <meta property="og:image" content="https://zusto-cafe.es/wp-content/uploads/2025/12/FotoDecoracionZusto1-683x1024.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Zùsto Café by Eric — Puerto Banús, Marbella</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://zusto-cafe.es" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
   <link rel="stylesheet" href="./design-hardening.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CafeOrCoffeeShop",
+    "name":"Zùsto Café by Eric",
+    "description":"Pastelería artesanal y café en Puerto Banús que combina el oficio pastelero con la innovación de Zùsto.",
+    "address":{"@type":"PostalAddress","streetAddress":"Av. de Julio Iglesias","addressLocality":"Nueva Andalucía, Marbella","postalCode":"29660","addressRegion":"Málaga","addressCountry":"ES"},
+    "sameAs":["https://www.instagram.com/zustocafe.es/"],
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"20:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"08:00","closes":"22:00"}
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
   <div class="cursor-glow" aria-hidden="true"></div>
+
   <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="Zùsto Café by Eric">
+    <a class="brand" href="#top" aria-label="Zùsto Café by Eric, inicio">
       <span class="brand-main">ZÙSTO</span><span class="brand-sub">café by Eric</span>
     </a>
     <nav class="desktop-nav" aria-label="Navegación principal">
       <a href="#concept" data-i18n="navConcept">Concepto</a>
-      <a href="#menu" data-i18n="navMenu">Carta</a>
-      <a href="#eric">Eric</a>
+      <a href="#experience" data-i18n="navExperience">Experiencia</a>
+      <a href="#selection" data-i18n="navSelection">Selección</a>
       <a href="#visit" data-i18n="navVisit">Visítanos</a>
     </nav>
     <div class="header-actions">
-      <button class="lang-toggle" aria-label="Cambiar idioma"><span class="active">ES</span><span>/</span><span>EN</span></button>
-      <a class="reserve-pill" href="#visit" data-i18n="reserve">Reservar</a>
-      <button class="menu-toggle" aria-label="Abrir menú"><span></span><span></span></button>
+      <button class="lang-toggle" type="button" aria-label="Cambiar idioma entre español e inglés" aria-pressed="false"><span class="active">ES</span><span>/</span><span>EN</span></button>
+      <a class="reserve-pill" href="#visit" data-i18n="visitCta">Cómo llegar</a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
     </div>
   </header>
 
   <div class="mobile-menu" aria-hidden="true">
     <div class="mobile-menu-inner">
       <a href="#concept" data-i18n="navConcept">Concepto</a>
-      <a href="#menu" data-i18n="navMenu">Carta</a>
-      <a href="#eric">Eric</a>
+      <a href="#experience" data-i18n="navExperience">Experiencia</a>
+      <a href="#selection" data-i18n="navSelection">Selección</a>
       <a href="#visit" data-i18n="navVisit">Visítanos</a>
       <a href="https://www.instagram.com/zustocafe.es/" target="_blank" rel="noreferrer">Instagram ↗</a>
     </div>
   </div>
 
-  <main>
-    <section class="hero" aria-label="Zùsto Café">
+  <main id="main">
+    <section class="hero" aria-label="Zùsto Café by Eric">
       <div class="hero-media">
-        <img src="https://estaticos-cdn.prensaiberica.es/clip/5d00e702-e169-46dd-854c-26e1c5703e83_alta-libre-aspect-ratio_default_0.jpg" alt="Interior y pastelería de Zùsto Café by Eric" fetchpriority="high" />
+        <img src="https://zusto-cafe.es/wp-content/uploads/2025/12/FotoDecoracionZusto1-683x1024.png" alt="Interior de Zùsto Café by Eric en Puerto Banús" fetchpriority="high" decoding="async" />
       </div>
       <div class="hero-scrim"></div>
       <div class="hero-copy reveal">
         <p class="eyebrow" data-i18n="heroEyebrow">PUERTO BANÚS · PÂTISSERIE & CAFÉ</p>
         <h1><span data-i18n="heroTitleA">No sugar.</span><em data-i18n="heroTitleB">Same taste.</em></h1>
-        <p class="hero-intro" data-i18n="heroIntro">Alta pastelería, gelato y café donde el placer sigue siendo lo primero.</p>
+        <p class="hero-intro" data-i18n="heroIntro">Pastelería artesanal, café y una forma más consciente de disfrutar lo dulce, sin convertir el placer en una renuncia.</p>
         <div class="hero-ctas">
-          <a class="btn btn-light" href="#menu"><span data-i18n="discoverMenu">Descubrir la carta</span><b>↘</b></a>
-          <a class="text-link light" href="#visit"><span data-i18n="visitToday">Visítanos hoy</span><b>↗</b></a>
+          <a class="btn btn-light" href="#experience"><span data-i18n="discover">Descubrir Zùsto</span><b aria-hidden="true">↘</b></a>
+          <a class="text-link light" href="#visit"><span data-i18n="visitToday">Visítanos hoy</span><b aria-hidden="true">↗</b></a>
         </div>
       </div>
-      <div class="hero-bottom">
-        <span>Marbella · Spain</span>
-        <span class="scroll-cue" data-i18n="scroll">Desliza para descubrir</span>
-      </div>
+      <div class="hero-bottom"><span>Marbella · Spain</span><span class="scroll-cue" data-i18n="scroll">Desliza para descubrir</span></div>
     </section>
 
     <section class="manifesto section-pad" id="concept">
       <div class="section-kicker reveal"><span>01</span><span data-i18n="newWay">Una nueva forma de disfrutar</span></div>
       <div class="manifesto-grid">
-        <h2 class="display reveal" data-i18n="manifestoTitle">El azúcar desaparece.<br><em>El capricho no.</em></h2>
+        <h2 class="display reveal" data-i18n="manifestoTitle">Tradición pastelera.<br><em>Mirada de futuro.</em></h2>
         <div class="manifesto-copy reveal">
-          <p data-i18n="manifestoP1">Zùsto une innovación belga y oficio pastelero para mantener lo importante: sabor, textura y una vitrina que apetece desde el primer vistazo.</p>
-          <p data-i18n="manifestoP2">Una propuesta creada para disfrutar sin azúcar añadido, sin convertir el placer en una renuncia.</p>
+          <p data-i18n="manifestoP1">Zùsto by Eric nace de una visión compartida: reinventar la forma de disfrutar lo dulce sin renunciar al sabor, la calidad ni la experiencia.</p>
+          <p data-i18n="manifestoP2">La excelencia artesanal de Eric se une a la innovación de Zùsto para crear una cafetería donde tradición y bienestar conviven de manera natural.</p>
         </div>
       </div>
-      <div class="facts reveal">
-        <article><strong>75%</strong><span data-i18n="fact1">menos calorías frente al azúcar convencional*</span></article>
-        <article><strong>65%</strong><span data-i18n="fact2">de fibras dietéticas en Zùsto*</span></article>
-        <article><strong>22</strong><span data-i18n="fact3">índice glucémico declarado de Zùsto*</span></article>
+      <div class="principles reveal" aria-label="Principios de Zùsto Café">
+        <article><span>01</span><h3 data-i18n="principle1Title">Experiencia premium</h3><p data-i18n="principle1Text">Ambiente, producto y servicio cuidados para crear una experiencia elegante, cercana y memorable.</p></article>
+        <article><span>02</span><h3 data-i18n="principle2Title">Pastelería consciente</h3><p data-i18n="principle2Text">Una propuesta que busca equilibrio sin sacrificar sabor, textura ni calidad.</p></article>
+        <article><span>03</span><h3 data-i18n="principle3Title">Innovación real</h3><p data-i18n="principle3Text">Una nueva forma de endulzar y de mirar a la pastelería contemporánea.</p></article>
       </div>
-      <p class="micro-note" data-i18n="factsNote">*Datos publicados por la marca sobre el ingrediente Zùsto.</p>
     </section>
 
-    <section class="editorial-gallery">
+    <section class="editorial-gallery" id="experience" aria-label="Experiencia Zùsto">
       <figure class="gallery-big reveal-img">
-        <img loading="lazy" src="https://s1.abcstatics.com/abc/www/multimedia/gurme/2025/08/27/Diseosinttulo%282%29-U42328072050DuU-760x427%40diario_abc.png" alt="Selección de pastelería de Zùsto Café" />
-        <figcaption><span data-i18n="gallery1Small">Pâtisserie</span><strong data-i18n="gallery1Big">Hecha para mirar.<br>Y después repetir.</strong></figcaption>
+        <img loading="lazy" decoding="async" src="https://zusto-cafe.es/wp-content/uploads/2025/12/Foto-tartas-683x1024.png" alt="Tartas y pastelería artesanal de Zùsto Café" />
+        <figcaption><span data-i18n="gallery1Small">Pâtisserie</span><strong data-i18n="gallery1Big">Hecha para mirar.<br>Y después probar.</strong></figcaption>
       </figure>
       <figure class="gallery-tall reveal-img">
-        <img loading="lazy" src="https://foodle.pro/meals-images/2026-03-27-13-28-27-f6204e71470f32706accbf975d106f5a.jpg" alt="Tarta de manzana servida en Zùsto Café" />
-        <figcaption><span data-i18n="gallery2Small">Sweet ritual</span><strong data-i18n="gallery2Big">Clásicos,<br>reimaginados.</strong></figcaption>
+        <img loading="lazy" decoding="async" src="https://zusto-cafe.es/wp-content/uploads/2025/12/FotoDecoracionZusto2-683x1024.png" alt="Detalle del espacio de Zùsto Café en Puerto Banús" />
+        <figcaption><span data-i18n="gallery2Small">Puerto Banús</span><strong data-i18n="gallery2Big">Un café con<br>identidad propia.</strong></figcaption>
       </figure>
     </section>
 
-    <section class="menu-section section-pad" id="menu">
-      <div class="menu-head reveal">
-        <div><span class="index">02</span><span class="label" data-i18n="selection">Selección Zùsto</span></div>
-        <h2 class="display" data-i18n="menuTitle">Elige tu <em>momento.</em></h2>
-        <p data-i18n="menuIntro">Desayunar, parar a media tarde o terminar el día con algo dulce. La carta gira alrededor de una idea sencilla: mismo placer, otra manera de hacerlo.</p>
+    <section class="story-section section-pad">
+      <div class="story-index reveal"><span>02</span><span data-i18n="essence">Nuestra esencia</span></div>
+      <div class="story-grid">
+        <div class="story-statement reveal">
+          <p class="eyebrow dark" data-i18n="storyEyebrow">PLACER · INNOVACIÓN · DETALLE</p>
+          <h2 class="display" data-i18n="storyTitle">No se trata de renunciar.<br><em>Se trata de evolucionar.</em></h2>
+        </div>
+        <div class="story-copy reveal">
+          <p data-i18n="storyP1">La propuesta va más allá de una cafetería tradicional. Zùsto by Eric combina conocimiento, innovación y pasión por el detalle.</p>
+          <p data-i18n="storyP2">La filosofía es sencilla: respetar la tradición pastelera y adaptarla a nuevas formas de disfrutar, manteniendo el sabor auténtico en el centro.</p>
+          <a class="text-link" href="https://zusto-cafe.es/sobrenosotros/" target="_blank" rel="noreferrer"><span data-i18n="officialStory">Conocer la historia oficial</span><b aria-hidden="true">↗</b></a>
+        </div>
       </div>
-      <div class="menu-tabs reveal" role="tablist">
-        <button class="menu-tab active" data-category="pastry" data-i18n="catPastry">Pastelería</button>
-        <button class="menu-tab" data-category="breakfast" data-i18n="catBreakfast">Desayunos</button>
-        <button class="menu-tab" data-category="gelato">Gelato</button>
-        <button class="menu-tab" data-category="coffee" data-i18n="catCoffee">Café</button>
+    </section>
+
+    <section class="selection-section section-pad" id="selection">
+      <div class="selection-head reveal">
+        <div><span class="index">03</span><span class="label" data-i18n="selectionLabel">Momentos Zùsto</span></div>
+        <h2 class="display" data-i18n="selectionTitle">Una experiencia para<br><em>cada momento.</em></h2>
+        <p data-i18n="selectionIntro">Desde el café de primera hora hasta una pausa dulce por la tarde, la experiencia Zùsto se construye alrededor del producto, el ambiente y el detalle.</p>
       </div>
-      <div class="menu-grid" id="menuGrid"></div>
-      <p class="menu-disclaimer" data-i18n="menuDisclaimer">Selección orientativa para el prototipo. La carta final se sincronizaría con la oferta real del local.</p>
+      <div class="experience-cards reveal">
+        <article><span>01</span><h3 data-i18n="card1Title">Pâtisserie</h3><p data-i18n="card1Text">Pastelería artesanal y piezas pensadas para disfrutar con calma.</p></article>
+        <article><span>02</span><h3 data-i18n="card2Title">Coffee</h3><p data-i18n="card2Text">El ritual diario, servido dentro de una experiencia cuidada.</p></article>
+        <article><span>03</span><h3 data-i18n="card3Title">Sweet moments</h3><p data-i18n="card3Text">Un punto de encuentro para desayunar, parar o terminar el día con algo especial.</p></article>
+      </div>
+      <div class="product-spotlight reveal-img">
+        <img loading="lazy" decoding="async" src="https://zusto-cafe.es/wp-content/uploads/2025/12/barrita2.png" alt="Producto Zùsto" />
+        <div class="product-spotlight-copy">
+          <p class="eyebrow dark" data-i18n="zustoIngredient">LA INNOVACIÓN ZÙSTO</p>
+          <h3 data-i18n="productTitle">Más allá del azúcar tradicional.</h3>
+          <p data-i18n="productText">Zùsto es la innovación que impulsa el concepto: una alternativa creada para mantener dulzor, textura y comportamiento en cocina y pastelería.</p>
+          <a class="btn" href="https://zusto-cafe.es/" target="_blank" rel="noreferrer"><span data-i18n="officialSite">Ver productos oficiales</span><b aria-hidden="true">↗</b></a>
+        </div>
+      </div>
     </section>
 
     <section class="eric-section" id="eric">
-      <div class="eric-image reveal-img"><img loading="lazy" src="https://marbellachic.com/wp-content/uploads/2025/09/Zusto-Cafe-by-Eric-Puerto-Banus-2.jpg" alt="Eric Vermeulen en Zùsto Café" /></div>
+      <div class="eric-image reveal-img"><img loading="lazy" decoding="async" src="https://zusto-cafe.es/wp-content/uploads/2025/12/DSC03153-768x1152.jpg" alt="Detalle de la experiencia Zùsto by Eric" /></div>
       <div class="eric-copy section-pad reveal">
-        <p class="eyebrow dark">ERIC VERMEULEN · BELGIAN PASTRY CRAFT</p>
+        <p class="eyebrow dark">ZÙSTO BY ERIC · PASTRY CRAFT</p>
         <h2 class="display" data-i18n="ericTitle">Oficio clásico.<br><em>Una idea nueva.</em></h2>
-        <p data-i18n="ericP">La técnica pastelera de Eric convierte el concepto Zùsto en una experiencia real: croissants, tartas, postres, chocolates y helados pensados para que la primera reacción sea «qué bueno», no «para ser sin azúcar».</p>
-        <div class="signature">Eric</div>
+        <p data-i18n="ericP">Eric aporta el oficio pastelero; Zùsto, una nueva manera de entender lo dulce. El resultado es una propuesta que busca que lo saludable no tenga aspecto de compromiso.</p>
+        <div class="signature" aria-hidden="true">Eric</div>
       </div>
     </section>
 
     <section class="quote-section">
-      <p class="quote-mark">“</p>
-      <blockquote class="reveal" data-i18n="quote">El sabor no debería ser el precio de cuidarte.</blockquote>
+      <p class="quote-mark" aria-hidden="true">“</p>
+      <blockquote class="reveal" data-i18n="quote">Mismos sabores, mismas emociones. Una experiencia más consciente.</blockquote>
       <p class="quote-credit">Zùsto Café by Eric</p>
     </section>
 
     <section class="instagram-section section-pad">
       <div class="instagram-head reveal">
-        <div><span class="index">03</span><span class="label">Instagram</span></div>
-        <h2 class="display" data-i18n="igTitle">De la vitrina<br><em>al feed.</em></h2>
-        <a class="text-link" href="https://www.instagram.com/zustocafe.es/" target="_blank" rel="noreferrer">@zustocafe.es <b>↗</b></a>
+        <div><span class="index">04</span><span class="label">Instagram</span></div>
+        <h2 class="display" data-i18n="igTitle">De Puerto Banús<br><em>al feed.</em></h2>
+        <a class="text-link" href="https://www.instagram.com/zustocafe.es/" target="_blank" rel="noreferrer">@zustocafe.es <b aria-hidden="true">↗</b></a>
       </div>
       <div class="ig-grid">
-        <div class="ig-card reveal-img"><img loading="lazy" src="https://s1.abcstatics.com/abc/www/multimedia/gurme/2025/08/27/Diseosinttulo%282%29-U42328072050DuU-760x427%40diario_abc.png" alt="Pastelería Zùsto" /></div>
-        <div class="ig-card reveal-img"><img loading="lazy" src="https://estaticos-cdn.prensaiberica.es/clip/5d00e702-e169-46dd-854c-26e1c5703e83_alta-libre-aspect-ratio_default_0.jpg" alt="Interior Zùsto Café" /></div>
-        <div class="ig-card reveal-img"><img loading="lazy" src="https://foodle.pro/meals-images/2026-03-27-13-28-27-f6204e71470f32706accbf975d106f5a.jpg" alt="Postre Zùsto" /></div>
+        <div class="ig-card reveal-img"><img loading="lazy" decoding="async" src="https://zusto-cafe.es/wp-content/uploads/2025/12/FotoDecoracionZusto1-683x1024.png" alt="Zùsto Café, Puerto Banús" /></div>
+        <div class="ig-card reveal-img"><img loading="lazy" decoding="async" src="https://zusto-cafe.es/wp-content/uploads/2025/12/Foto-tartas-683x1024.png" alt="Pastelería Zùsto" /></div>
+        <div class="ig-card reveal-img"><img loading="lazy" decoding="async" src="https://zusto-cafe.es/wp-content/uploads/2025/12/FotoDecoracionZusto2-683x1024.png" alt="Interior de Zùsto Café" /></div>
       </div>
     </section>
 
     <section class="visit-section" id="visit">
-      <div class="visit-media"><img loading="lazy" src="https://estaticos-cdn.prensaiberica.es/clip/5d00e702-e169-46dd-854c-26e1c5703e83_alta-libre-aspect-ratio_default_0.jpg" alt="Zùsto Café Puerto Banús" /></div>
+      <div class="visit-media"><img loading="lazy" decoding="async" src="https://zusto-cafe.es/wp-content/uploads/2025/12/FotoDecoracionZusto1-683x1024.png" alt="Zùsto Café en Puerto Banús" /></div>
       <div class="visit-overlay"></div>
       <div class="visit-content reveal">
         <p class="eyebrow" data-i18n="visitEyebrow">VEN A PROBARLO · PUERTO BANÚS</p>
         <h2 data-i18n="visitTitle">Tu pausa dulce,<br><em>junto al puerto.</em></h2>
         <div class="visit-data">
-          <div><span data-i18n="hours">Horario</span><strong data-i18n="hoursValue">Lunes a domingo<br>08:00 — 22:00</strong></div>
-          <div><span data-i18n="location">Ubicación</span><strong>Avenida Julio Iglesias 19<br>Puerto Banús · Marbella</strong></div>
+          <div><span data-i18n="hours">Horario</span><strong data-i18n="hoursValue">Lun — Vie · 08:00 — 20:00<br>Sáb — Dom · 08:00 — 22:00</strong></div>
+          <div><span data-i18n="location">Ubicación</span><strong>Av. de Julio Iglesias<br>Nueva Andalucía · Marbella</strong></div>
         </div>
         <div class="visit-actions">
-          <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=Zusto+Cafe+Puerto+Banus" target="_blank" rel="noreferrer"><span data-i18n="maps">Abrir en Maps</span><b>↗</b></a>
-          <a class="text-link light" href="https://www.instagram.com/zustocafe.es/" target="_blank" rel="noreferrer">Instagram <b>↗</b></a>
+          <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=Zusto+Cafe+Puerto+Banus+Marbella" target="_blank" rel="noreferrer"><span data-i18n="maps">Abrir en Maps</span><b aria-hidden="true">↗</b></a>
+          <a class="text-link light" href="https://www.instagram.com/zustocafe.es/" target="_blank" rel="noreferrer">Instagram <b aria-hidden="true">↗</b></a>
         </div>
       </div>
     </section>
@@ -156,8 +198,9 @@
   <footer class="footer">
     <div class="footer-brand"><span>ZÙSTO</span><small>café by Eric</small></div>
     <div class="footer-meta"><span>Puerto Banús · Marbella</span><span>© 2026 Zùsto Café by Eric</span></div>
-    <div class="footer-links"><a href="#top" data-i18n="backTop">Volver arriba ↑</a><span class="archic">Prototype by Archic</span></div>
+    <div class="footer-links"><a href="https://zusto-cafe.es/aviso-legal/" target="_blank" rel="noreferrer">Legal</a><a href="#top" data-i18n="backTop">Volver arriba ↑</a><span class="archic">Concept by Archic</span></div>
   </footer>
+
   <script src="./script.js" defer></script>
 </body>
 </html>
