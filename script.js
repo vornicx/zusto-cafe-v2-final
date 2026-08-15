@@ -1,91 +1,137 @@
-const translations={
-es:{navConcept:'Concepto',navMenu:'Carta',navVisit:'Visítanos',reserve:'Reservar',heroEyebrow:'PUERTO BANÚS · PÂTISSERIE & CAFÉ',heroTitleA:'No sugar.',heroTitleB:'Same taste.',heroIntro:'Alta pastelería, gelato y café donde el placer sigue siendo lo primero.',discoverMenu:'Descubrir la carta',visitToday:'Visítanos hoy',scroll:'Desliza para descubrir',newWay:'Una nueva forma de disfrutar',manifestoTitle:'El azúcar desaparece.<br><em>El capricho no.</em>',manifestoP1:'Zùsto une innovación belga y oficio pastelero para mantener lo importante: sabor, textura y una vitrina que apetece desde el primer vistazo.',manifestoP2:'Una propuesta creada para disfrutar sin azúcar añadido, sin convertir el placer en una renuncia.',fact1:'menos calorías frente al azúcar convencional*',fact2:'de fibras dietéticas en Zùsto*',fact3:'índice glucémico declarado de Zùsto*',factsNote:'*Datos publicados por la marca sobre el ingrediente Zùsto.',gallery1Small:'Pâtisserie',gallery1Big:'Hecha para mirar.<br>Y después repetir.',gallery2Small:'Sweet ritual',gallery2Big:'Clásicos,<br>reimaginados.',selection:'Selección Zùsto',menuTitle:'Elige tu <em>momento.</em>',menuIntro:'Desayunar, parar a media tarde o terminar el día con algo dulce. La carta gira alrededor de una idea sencilla: mismo placer, otra manera de hacerlo.',catPastry:'Pastelería',catBreakfast:'Desayunos',catCoffee:'Café',menuDisclaimer:'Selección orientativa para el prototipo. La carta final se sincronizaría con la oferta real del local.',ericTitle:'Oficio clásico.<br><em>Una idea nueva.</em>',ericP:'La técnica pastelera de Eric convierte el concepto Zùsto en una experiencia real: croissants, tartas, postres, chocolates y helados pensados para que la primera reacción sea «qué bueno», no «para ser sin azúcar».',quote:'El sabor no debería ser el precio de cuidarte.',igTitle:'De la vitrina<br><em>al feed.</em>',visitEyebrow:'VEN A PROBARLO · PUERTO BANÚS',visitTitle:'Tu pausa dulce,<br><em>junto al puerto.</em>',hours:'Horario',hoursValue:'Lunes a domingo<br>08:00 — 22:00',location:'Ubicación',maps:'Abrir en Maps',backTop:'Volver arriba ↑'},
-en:{navConcept:'Concept',navMenu:'Menu',navVisit:'Visit',reserve:'Book',heroEyebrow:'PUERTO BANÚS · PÂTISSERIE & CAFÉ',heroTitleA:'No sugar.',heroTitleB:'Same taste.',heroIntro:'Fine pastry, gelato and coffee where pleasure still comes first.',discoverMenu:'Explore the menu',visitToday:'Visit us today',scroll:'Scroll to discover',newWay:'A new way to indulge',manifestoTitle:'Sugar disappears.<br><em>Pleasure stays.</em>',manifestoP1:'Zùsto blends Belgian innovation with pastry craftsmanship to preserve what matters: flavour, texture and a display you want from the very first glance.',manifestoP2:'A concept made for indulgence without added sugar, without turning pleasure into compromise.',fact1:'fewer calories than conventional sugar*',fact2:'dietary fibre in Zùsto*',fact3:'stated glycaemic index of Zùsto*',factsNote:'*Figures published by the brand for the Zùsto ingredient.',gallery1Small:'Pâtisserie',gallery1Big:'Made to admire.<br>Then order again.',gallery2Small:'Sweet ritual',gallery2Big:'Classics,<br>reimagined.',selection:'Zùsto selection',menuTitle:'Choose your <em>moment.</em>',menuIntro:'Breakfast, an afternoon pause or something sweet to end the day. The menu revolves around one simple idea: same pleasure, a different way to make it.',catPastry:'Pastry',catBreakfast:'Breakfast',catCoffee:'Coffee',menuDisclaimer:'Curated sample for the prototype. The final menu would be synced with the café’s real offering.',ericTitle:'Classic craft.<br><em>A new idea.</em>',ericP:'Eric’s pastry craft turns the Zùsto concept into a real experience: croissants, tarts, desserts, chocolates and gelato designed so your first reaction is “that’s delicious”, not “good for sugar-free”.',quote:'Taste should never be the price of taking care of yourself.',igTitle:'From the counter<br><em>to the feed.</em>',visitEyebrow:'COME TASTE IT · PUERTO BANÚS',visitTitle:'Your sweet pause,<br><em>by the marina.</em>',hours:'Opening hours',hoursValue:'Monday to Sunday<br>08:00 — 22:00',location:'Location',maps:'Open in Maps',backTop:'Back to top ↑'}
+const translations = {
+  es: {
+    navConcept: 'Concepto', navExperience: 'Experiencia', navSelection: 'Selección', navVisit: 'Visítanos', visitCta: 'Cómo llegar',
+    heroEyebrow: 'PUERTO BANÚS · PÂTISSERIE & CAFÉ', heroTitleA: 'No sugar.', heroTitleB: 'Same taste.',
+    heroIntro: 'Pastelería artesanal, café y una forma más consciente de disfrutar lo dulce, sin convertir el placer en una renuncia.',
+    discover: 'Descubrir Zùsto', visitToday: 'Visítanos hoy', scroll: 'Desliza para descubrir', newWay: 'Una nueva forma de disfrutar',
+    manifestoTitle: 'Tradición pastelera.<br><em>Mirada de futuro.</em>',
+    manifestoP1: 'Zùsto by Eric nace de una visión compartida: reinventar la forma de disfrutar lo dulce sin renunciar al sabor, la calidad ni la experiencia.',
+    manifestoP2: 'La excelencia artesanal de Eric se une a la innovación de Zùsto para crear una cafetería donde tradición y bienestar conviven de manera natural.',
+    principle1Title: 'Experiencia premium', principle1Text: 'Ambiente, producto y servicio cuidados para crear una experiencia elegante, cercana y memorable.',
+    principle2Title: 'Pastelería consciente', principle2Text: 'Una propuesta que busca equilibrio sin sacrificar sabor, textura ni calidad.',
+    principle3Title: 'Innovación real', principle3Text: 'Una nueva forma de endulzar y de mirar a la pastelería contemporánea.',
+    gallery1Small: 'Pâtisserie', gallery1Big: 'Hecha para mirar.<br>Y después probar.', gallery2Small: 'Puerto Banús', gallery2Big: 'Un café con<br>identidad propia.',
+    essence: 'Nuestra esencia', storyEyebrow: 'PLACER · INNOVACIÓN · DETALLE', storyTitle: 'No se trata de renunciar.<br><em>Se trata de evolucionar.</em>',
+    storyP1: 'La propuesta va más allá de una cafetería tradicional. Zùsto by Eric combina conocimiento, innovación y pasión por el detalle.',
+    storyP2: 'La filosofía es sencilla: respetar la tradición pastelera y adaptarla a nuevas formas de disfrutar, manteniendo el sabor auténtico en el centro.',
+    officialStory: 'Conocer la historia oficial', selectionLabel: 'Momentos Zùsto', selectionTitle: 'Una experiencia para<br><em>cada momento.</em>',
+    selectionIntro: 'Desde el café de primera hora hasta una pausa dulce por la tarde, la experiencia Zùsto se construye alrededor del producto, el ambiente y el detalle.',
+    card1Title: 'Pâtisserie', card1Text: 'Pastelería artesanal y piezas pensadas para disfrutar con calma.',
+    card2Title: 'Coffee', card2Text: 'El ritual diario, servido dentro de una experiencia cuidada.',
+    card3Title: 'Sweet moments', card3Text: 'Un punto de encuentro para desayunar, parar o terminar el día con algo especial.',
+    zustoIngredient: 'LA INNOVACIÓN ZÙSTO', productTitle: 'Más allá del azúcar tradicional.',
+    productText: 'Zùsto es la innovación que impulsa el concepto: una alternativa creada para mantener dulzor, textura y comportamiento en cocina y pastelería.',
+    officialSite: 'Ver productos oficiales', ericTitle: 'Oficio clásico.<br><em>Una idea nueva.</em>',
+    ericP: 'Eric aporta el oficio pastelero; Zùsto, una nueva manera de entender lo dulce. El resultado es una propuesta que busca que lo saludable no tenga aspecto de compromiso.',
+    quote: 'Mismos sabores, mismas emociones. Una experiencia más consciente.', igTitle: 'De Puerto Banús<br><em>al feed.</em>',
+    visitEyebrow: 'VEN A PROBARLO · PUERTO BANÚS', visitTitle: 'Tu pausa dulce,<br><em>junto al puerto.</em>', hours: 'Horario',
+    hoursValue: 'Lun — Vie · 08:00 — 20:00<br>Sáb — Dom · 08:00 — 22:00', location: 'Ubicación', maps: 'Abrir en Maps', backTop: 'Volver arriba ↑'
+  },
+  en: {
+    navConcept: 'Concept', navExperience: 'Experience', navSelection: 'Selection', navVisit: 'Visit', visitCta: 'Get directions',
+    heroEyebrow: 'PUERTO BANÚS · PÂTISSERIE & CAFÉ', heroTitleA: 'No sugar.', heroTitleB: 'Same taste.',
+    heroIntro: 'Artisan pastry, coffee and a more conscious way to enjoy something sweet, without turning pleasure into compromise.',
+    discover: 'Discover Zùsto', visitToday: 'Visit us today', scroll: 'Scroll to discover', newWay: 'A new way to indulge',
+    manifestoTitle: 'Pastry tradition.<br><em>A future-facing vision.</em>',
+    manifestoP1: 'Zùsto by Eric was born from a shared vision: reinventing the way we enjoy sweetness without giving up flavour, quality or experience.',
+    manifestoP2: 'Eric’s artisan excellence meets Zùsto innovation to create a café where tradition and wellbeing coexist naturally.',
+    principle1Title: 'Premium experience', principle1Text: 'Space, product and service are considered to create an elegant, warm and memorable experience.',
+    principle2Title: 'Conscious pastry', principle2Text: 'A balanced approach that aims to preserve flavour, texture and quality.',
+    principle3Title: 'Real innovation', principle3Text: 'A new way to sweeten and a new perspective on contemporary pastry.',
+    gallery1Small: 'Pâtisserie', gallery1Big: 'Made to admire.<br>Then to taste.', gallery2Small: 'Puerto Banús', gallery2Big: 'A café with<br>its own identity.',
+    essence: 'Our essence', storyEyebrow: 'PLEASURE · INNOVATION · DETAIL', storyTitle: 'It is not about giving things up.<br><em>It is about evolving.</em>',
+    storyP1: 'The concept goes beyond a traditional café. Zùsto by Eric brings together knowledge, innovation and a passion for detail.',
+    storyP2: 'The philosophy is simple: respect pastry tradition while adapting it to new ways of enjoying it, keeping authentic flavour at the centre.',
+    officialStory: 'Read the official story', selectionLabel: 'Zùsto moments', selectionTitle: 'An experience for<br><em>every moment.</em>',
+    selectionIntro: 'From the first coffee of the day to a sweet afternoon pause, the Zùsto experience is built around product, atmosphere and detail.',
+    card1Title: 'Pâtisserie', card1Text: 'Artisan pastry and pieces made to be enjoyed slowly.',
+    card2Title: 'Coffee', card2Text: 'The daily ritual, served as part of a considered experience.',
+    card3Title: 'Sweet moments', card3Text: 'A meeting point for breakfast, a pause or something special at the end of the day.',
+    zustoIngredient: 'ZÙSTO INNOVATION', productTitle: 'Beyond traditional sugar.',
+    productText: 'Zùsto is the innovation behind the concept: an alternative designed to preserve sweetness, texture and performance in cooking and pastry.',
+    officialSite: 'See official products', ericTitle: 'Classic craft.<br><em>A new idea.</em>',
+    ericP: 'Eric brings pastry craft; Zùsto brings a new way of thinking about sweetness. The result aims to make conscious choices feel like an upgrade, not a compromise.',
+    quote: 'Same flavours, same emotions. A more conscious experience.', igTitle: 'From Puerto Banús<br><em>to the feed.</em>',
+    visitEyebrow: 'COME TASTE IT · PUERTO BANÚS', visitTitle: 'Your sweet pause,<br><em>by the marina.</em>', hours: 'Opening hours',
+    hoursValue: 'Mon — Fri · 08:00 — 20:00<br>Sat — Sun · 08:00 — 22:00', location: 'Location', maps: 'Open in Maps', backTop: 'Back to top ↑'
+  }
 };
-const menuData={
-es:{pastry:[['01','Croissant signature','Hojaldre, mantequilla y acabado artesanal.'],['02','Tartaletas de fruta','Fruta fresca, crema y texturas de temporada.'],['03','Chocolate selection','Bombonería y piezas de chocolate con receta Zùsto.'],['04','Piezas individuales','Una vitrina cambiante de alta pastelería.'],['05','Tartas para compartir','Formatos pensados para mesa y celebración.'],['06','Viennoiserie','Bollería de inspiración belga, recién hecha.']],breakfast:[['01','Breakfast pastry','Bollería, café y una mañana sin prisa.'],['02','Yogurt & fruit','Combinaciones frescas para empezar ligero.'],['03','Toast selection','Opciones saladas para equilibrar la mañana.'],['04','Fresh juices','Zumos y bebidas frías.'],['05','Sweet breakfast','El lado más indulgente del desayuno.'],['06','Brunch moments','Una selección para compartir.']],gelato:[['01','Vanilla','Cremoso y limpio.'],['02','Chocolate','Intenso, redondo, clásico.'],['03','Pistachio','Fruto seco y textura sedosa.'],['04','Seasonal fruit','Sabores que cambian con la temporada.'],['05','Affogato','Gelato y espresso.'],['06','To take away','Tu Zùsto para seguir paseando por Banús.']],coffee:[['01','Espresso','Corto, preciso y aromático.'],['02','Cappuccino','Espresso y leche texturizada.'],['03','Flat white','Más café, textura cremosa.'],['04','Iced coffee','Café frío para Marbella.'],['05','Matcha & alternatives','Más allá del espresso.'],['06','Coffee & pastry','El dúo esencial de Zùsto.']]},
-en:{pastry:[['01','Signature croissant','Layered pastry, butter and artisan finish.'],['02','Fruit tarts','Fresh fruit, cream and seasonal textures.'],['03','Chocolate selection','Chocolate pieces made with the Zùsto recipe.'],['04','Individual pastries','An ever-changing fine pastry counter.'],['05','Cakes to share','Made for the table and for celebrations.'],['06','Viennoiserie','Belgian-inspired pastry, freshly made.']],breakfast:[['01','Breakfast pastry','Pastry, coffee and an unhurried morning.'],['02','Yogurt & fruit','Fresh combinations for a lighter start.'],['03','Toast selection','Savoury options to balance the morning.'],['04','Fresh juices','Juices and cold drinks.'],['05','Sweet breakfast','The indulgent side of breakfast.'],['06','Brunch moments','A selection made for sharing.']],gelato:[['01','Vanilla','Creamy and clean.'],['02','Chocolate','Deep, rounded, classic.'],['03','Pistachio','Nutty with a silky texture.'],['04','Seasonal fruit','Flavours changing with the season.'],['05','Affogato','Gelato meets espresso.'],['06','To take away','Take Zùsto on your walk through Banús.']],coffee:[['01','Espresso','Short, precise and aromatic.'],['02','Cappuccino','Espresso with textured milk.'],['03','Flat white','More coffee, creamy texture.'],['04','Iced coffee','Cold coffee for Marbella.'],['05','Matcha & alternatives','Beyond espresso.'],['06','Coffee & pastry','The essential Zùsto pairing.']]}};
-let lang='es',category='pastry';
 
-function qs(selector, scope=document){return scope.querySelector(selector)}
-function qsa(selector, scope=document){return [...scope.querySelectorAll(selector)]}
+let lang = 'es';
+const qs = (selector, scope = document) => scope.querySelector(selector);
+const qsa = (selector, scope = document) => [...scope.querySelectorAll(selector)];
 
-function renderMenu(){
-  const grid=qs('#menuGrid');
-  if(!grid || !menuData[lang] || !menuData[lang][category]) return;
-  grid.innerHTML=menuData[lang][category].map(([n,t,d])=>`<article class="menu-card"><span class="num">${n}</span><div><h3>${t}</h3><p>${d}</p></div><span class="price">Zùsto Café · Puerto Banús</span></article>`).join('');
-}
-
-function applyLang(){
-  document.documentElement.lang=lang;
-  qsa('[data-i18n]').forEach(el=>{
-    const key=el.dataset.i18n;
-    if(translations[lang] && translations[lang][key]) el.innerHTML=translations[lang][key];
+function applyLang() {
+  document.documentElement.lang = lang;
+  qsa('[data-i18n]').forEach((el) => {
+    const value = translations[lang]?.[el.dataset.i18n];
+    if (value) el.innerHTML = value;
   });
-  qsa('.lang-toggle span').forEach(el=>el.classList.toggle('active',el.textContent.trim()===lang.toUpperCase()));
-  renderMenu();
+  qsa('.lang-toggle span').forEach((el) => el.classList.toggle('active', el.textContent.trim() === lang.toUpperCase()));
+  const toggle = qs('.lang-toggle');
+  if (toggle) toggle.setAttribute('aria-pressed', String(lang === 'en'));
 }
 
-function setupInteractions(){
-  const langToggle=qs('.lang-toggle');
-  if(langToggle) langToggle.addEventListener('click',()=>{lang=lang==='es'?'en':'es';applyLang()});
+function setupInteractions() {
+  const langToggle = qs('.lang-toggle');
+  if (langToggle) langToggle.addEventListener('click', () => {
+    lang = lang === 'es' ? 'en' : 'es';
+    applyLang();
+  });
 
-  qsa('.menu-tab').forEach(btn=>btn.addEventListener('click',()=>{
-    qsa('.menu-tab').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-    category=btn.dataset.category || 'pastry';
-    renderMenu();
-  }));
+  const header = qs('.site-header');
+  const syncHeader = () => header?.classList.toggle('scrolled', window.scrollY > 40);
+  syncHeader();
+  window.addEventListener('scroll', syncHeader, { passive: true });
 
-  const header=qs('.site-header');
-  if(header) window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>40),{passive:true});
-
-  const menuBtn=qs('.menu-toggle');
-  const mobileMenu=qs('.mobile-menu');
-  if(menuBtn && mobileMenu){
-    menuBtn.addEventListener('click',()=>{
-      const open=mobileMenu.classList.toggle('open');
-      mobileMenu.setAttribute('aria-hidden',String(!open));
-      menuBtn.classList.toggle('active',open);
+  const menuBtn = qs('.menu-toggle');
+  const mobileMenu = qs('.mobile-menu');
+  if (menuBtn && mobileMenu) {
+    const setMenu = (open) => {
+      mobileMenu.classList.toggle('open', open);
+      mobileMenu.setAttribute('aria-hidden', String(!open));
+      menuBtn.classList.toggle('active', open);
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+      document.body.classList.toggle('menu-open', open);
+    };
+    menuBtn.addEventListener('click', () => setMenu(!mobileMenu.classList.contains('open')));
+    qsa('a', mobileMenu).forEach((a) => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && mobileMenu.classList.contains('open')) setMenu(false);
     });
-    qsa('a',mobileMenu).forEach(a=>a.addEventListener('click',()=>{
-      mobileMenu.classList.remove('open');
-      mobileMenu.setAttribute('aria-hidden','true');
-      menuBtn.classList.remove('active');
-    }));
   }
 
-  // Progressive enhancement: the page is visible even if this observer is unavailable.
-  if('IntersectionObserver' in window){
-    const io=new IntersectionObserver(entries=>entries.forEach(entry=>{
-      if(entry.isIntersecting){
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
+      if (entry.isIntersecting) {
         entry.target.classList.add('animate-in');
-        io.unobserve(entry.target);
+        observer.unobserve(entry.target);
       }
-    }),{threshold:.08,rootMargin:'0px 0px -5% 0px'});
-    qsa('.reveal,.reveal-img').forEach(el=>io.observe(el));
+    }), { threshold: 0.08, rootMargin: '0px 0px -5% 0px' });
+    qsa('.reveal,.reveal-img').forEach((el) => observer.observe(el));
   }
 
-  const glow=qs('.cursor-glow');
-  if(glow && matchMedia('(pointer:fine)').matches){
-    window.addEventListener('mousemove',e=>{
-      glow.style.left=e.clientX+'px';
-      glow.style.top=e.clientY+'px';
-      glow.style.opacity='1';
-    },{passive:true});
-    window.addEventListener('mouseleave',()=>glow.style.opacity='0');
+  const glow = qs('.cursor-glow');
+  if (glow && matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    window.addEventListener('mousemove', (event) => {
+      glow.style.left = `${event.clientX}px`;
+      glow.style.top = `${event.clientY}px`;
+      glow.style.opacity = '1';
+    }, { passive: true });
+    window.addEventListener('mouseleave', () => { glow.style.opacity = '0'; });
   }
 
-  qsa('img').forEach(img=>img.addEventListener('error',()=>{
-    img.classList.add('image-failed');
-    img.removeAttribute('src');
-  },{once:true}));
+  qsa('img').forEach((img) => img.addEventListener('error', () => {
+    img.closest('figure,.ig-card,.eric-image,.product-spotlight,.hero-media,.visit-media')?.classList.add('image-failed');
+    img.alt = '';
+  }, { once: true }));
 }
 
-function init(){
+function init() {
   applyLang();
   setupInteractions();
 }
 
-if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init,{once:true});
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });
 else init();
