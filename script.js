@@ -120,16 +120,6 @@ function setupInteractions() {
     qsa('.reveal,.reveal-img').forEach((el) => observer.observe(el));
   }
 
-  const glow = qs('.cursor-glow');
-  if (glow && matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    window.addEventListener('mousemove', (event) => {
-      glow.style.left = `${event.clientX}px`;
-      glow.style.top = `${event.clientY}px`;
-      glow.style.opacity = '1';
-    }, { passive: true });
-    window.addEventListener('mouseleave', () => { glow.style.opacity = '0'; });
-  }
-
   qsa('img').forEach((img) => img.addEventListener('error', () => {
     img.closest('figure,.ig-card,.eric-image,.product-spotlight,.hero-media,.visit-media')?.classList.add('image-failed');
     img.alt = '';
@@ -138,6 +128,7 @@ function setupInteractions() {
 
 function init() {
   ensureCanonical();
+  qs('.cursor-glow')?.remove();
   applyLang();
   setupInteractions();
 }
