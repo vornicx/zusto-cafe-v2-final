@@ -1,5 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "git": {
+    "deploymentEnabled": {
+      "*": false,
+      "main": true
+    }
+  },
   "buildCommand": "mkdir -p public && cp *.html *.css *.js *.txt *.xml public/",
   "outputDirectory": "public",
   "installCommand": "",
